@@ -1,7 +1,7 @@
 version: 1.0
 os: linux
 files:
-  - source: /
+  - source: ./appspec.yml
     destination: /home/ubuntu
 hooks:
   BeforeInstall:
