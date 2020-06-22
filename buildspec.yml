@@ -20,10 +20,13 @@ phases:
       - #npm test
       - echo Building...
       - npm run build
+  post_build:
+    commands:
+      - echo POST_BUILD ACTIONS
+      - mv appspec.yml build/
+      - mv -R scripts build/
 artifacts:
   files:
-    - ./appspec.yml
-    - ./scripts/*
     - "**/*"
   discard-paths: no
   base-directory: build
