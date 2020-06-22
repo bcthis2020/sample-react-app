@@ -24,5 +24,6 @@ artifacts:
   files:
     - "**/*"
     - appspec.yml
+    - scripts/*
   discard-paths: no
   base-directory: build
