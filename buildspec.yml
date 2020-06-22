@@ -23,8 +23,10 @@ phases:
   post_build:
     commands:
       - echo POST_BUILD ACTIONS
+      - echo MOVE APPSPEC.yml
       - mv appspec.yml build/
-      - mv -R scripts build/
+      - echo MOVE SCRIPTS FOLDER 
+      - mv scripts/* build/
 artifacts:
   files:
     - "**/*"
