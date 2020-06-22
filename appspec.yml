@@ -3,6 +3,11 @@ os: linux
 files:
   - source: /
     destination: /home/ubuntu
+permissions:
+  - object: /
+    pattern: "**"
+    owner: ubuntu
+    group: ubuntu
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies.sh
