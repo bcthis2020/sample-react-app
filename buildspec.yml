@@ -22,8 +22,8 @@ phases:
       - npm run build
 artifacts:
   files:
-    - appspec.yml
-    - scripts/*
+    - ./appspec.yml
+    - ./scripts/*
     - "**/*"
   discard-paths: no
   base-directory: build
