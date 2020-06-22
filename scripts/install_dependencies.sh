@@ -1,5 +1,5 @@
 #!/bin/bash
 
-source /home/ubuntu/.bash_profile
+source /home/ubuntu/.bashrc
 
 npm install
