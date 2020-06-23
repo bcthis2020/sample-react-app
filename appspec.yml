@@ -1,8 +1,6 @@
-version: 0.0
-os: linux
 files:
   - source: /
-  - destination: /home/ubuntu
+    destination: /home/ubuntu
 permissions:
   - object: /
     pattern: "**"
@@ -10,18 +8,19 @@ permissions:
     group: root
 hooks:
   BeforeInstall:
-    - location: scripts/stopscript.sh
+    - location: scripts/install_dependencies.sh
       timeout: 300
-      runas: root
+      runas: ubuntu
   AfterInstall:
-    - location: scripts/deletescript.sh
+    - location: scripts/change_permissions.sh
       timeout: 300
-      runas: root
+      runas: ubuntu
   ApplicationStart:
-    - location: scripts/startscript.sh
+    - location: scripts/start_server.sh
+    - location: scripts/create_test_db.sh
       timeout: 300
-      runas: root
+      runas: ubuntu
   ApplicationStop:
-    - location: scripts/stopscript.sh
+    - location: scripts/stop_server.sh
       timeout: 300
-      runas: root
+      runas: ubuntu
