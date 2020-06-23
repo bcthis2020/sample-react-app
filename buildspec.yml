@@ -27,6 +27,7 @@ phases:
       - mv appspec.yml build/
       - echo MOVE SCRIPTS FOLDER 
       - mv scripts build
+      - mv buildspec.yml build/
 artifacts:
   files:
     - "**/*"
